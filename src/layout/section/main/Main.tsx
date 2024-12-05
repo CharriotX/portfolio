@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import photo from "../../../accets/images/main.jpg";
 import { FlexContainer } from "../../../components/flexContainer/FlexContainer";
+import { Photo } from "../../../components/photo/Photo";
 
 export const Main = () => {
   return (
@@ -9,7 +10,7 @@ export const Main = () => {
       <FlexContainer justify="space-around">
         <div>
           <span>Hello, I’m</span>
-          <h2>Fabio Scaletta</h2>
+          <MainTitle>Fabio Scaletta</MainTitle>
           <span>
             I’m a UX/UI designer and Front End Developer based in Kuala Lumpur,
             Malaysia! 🇲🇾. I love designing, coding, creating and building stuff.{" "}
@@ -29,11 +30,4 @@ const StyledMain = styled.div`
 const MainTitle = styled.h2`
     
 `
-
-const Photo = styled.img`
-  width: 548px;
-  height: 390px;
-  object-fit: cover;
-  border-radius: 24px;
-`;
 

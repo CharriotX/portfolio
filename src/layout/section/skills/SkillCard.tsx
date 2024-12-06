@@ -2,18 +2,29 @@ import React from "react";
 import styled from "styled-components";
 import { FlexContainer } from "../../../components/flexContainer/FlexContainer";
 import { Photo } from "../../../components/photo/Photo";
+import { Icon } from "../../../components/icon/Icon";
 
 type SkillCardPropsType = {
-    srcImage: string
-}
+  techName: string,
+  textTitle: string,
+  srcImage: string;
+};
 
 export const SkillCard = (props: SkillCardPropsType) => {
   return (
     <StyledCard>
-      <FlexContainer>
-        <div></div>
+      <FlexContainer justify="center">
         <div>
-            <Photo src={props.srcImage} ></Photo>
+          <StyledName>{props.techName}</StyledName>
+          <StyledTitle>{props.textTitle}</StyledTitle>
+          <div>
+            <StyledLink>Learn More</StyledLink>
+            <Icon iconId="bigArrow"></Icon>
+          </div>
+        </div>
+
+        <div>
+          <Photo src={props.srcImage}></Photo>
         </div>
       </FlexContainer>
     </StyledCard>
@@ -21,15 +32,12 @@ export const SkillCard = (props: SkillCardPropsType) => {
 };
 
 const StyledCard = styled.div`
-  border: 1px solid rgba(255, 255, 255, 1);
+  border: 1px solid rgba(196, 196, 196, 1);
   border-radius: 30px;
 `;
 
-const StyledTitle = styled.h2`
-    
-`
+const StyledTitle = styled.h2``;
 
+const StyledName = styled.h4``;
 
-const StyledName = styled.h4`
-    
-`
+const StyledLink = styled.a``;

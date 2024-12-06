@@ -2,7 +2,7 @@ import React from "react";
 import { SectionTitle } from "../../../components/sectionTitle/SectionTitle";
 import { FlexContainer } from "../../../components/flexContainer/FlexContainer";
 import { Photo } from "../../../components/photo/Photo";
-import image from "../../accets/images/about.webp";
+import image from "../../../accets/images/about.webp"
 import styled from "styled-components";
 import { TechnologiesItem } from "./TechnologiesItem";
 

@@ -4,12 +4,13 @@ import { Logo } from "../../components/logo/Logo";
 import { Navigation } from "../../components/navigation/Navigation";
 import { Container } from "../../components/Container";
 import { FlexContainer } from "../../components/flexContainer/FlexContainer";
+import { theme } from "../../styles/Theme";
 
 export const Header = () => {
   return (
     <StyledHeader>
       <Container>
-        <FlexContainer justify="space-around" align="center">
+        <FlexContainer justify="space-between" align="center">
           <Logo />
           <Navigation></Navigation>
         </FlexContainer>
@@ -19,5 +20,6 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-  background: rgba(15, 191, 97, 0.1);
+  background: ${theme.colors.secondaryBg};
+  min-height: 100px;
 `;

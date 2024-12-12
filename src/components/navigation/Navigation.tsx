@@ -1,34 +1,51 @@
 import React from "react";
 import styled from "styled-components";
 import { PrimaryButton } from "../button/PrimaryButton";
+import { theme } from "../../styles/Theme";
 
 export const Navigation = () => {
   return (
     <StyledMenu>
-      <ul>
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Service</a>
-        </li>
-        <li>
-          <a href="#">My work</a>
-        </li>
-        <li>
+      <StyledList>
+        <StyledItem>
+          <StyledLink href="#">Home</StyledLink>
+        </StyledItem>
+        <StyledItem>
+          <StyledLink href="#">About</StyledLink>
+        </StyledItem>
+        <StyledItem>
+          <StyledLink href="#">Service</StyledLink>
+        </StyledItem>
+        <StyledItem>
+          <StyledLink href="#">My work</StyledLink>
+        </StyledItem>
+        <StyledItem>
           <PrimaryButton>Resume</PrimaryButton>
-        </li>
-      </ul>
+        </StyledItem>
+      </StyledList>
     </StyledMenu>
   );
 };
 
 const StyledMenu = styled.nav`
-  ul {
-    display: flex;
-    gap: 30px;
-  }
+
+`;
+
+const StyledList = styled.ul`
+  display: flex;
+  align-items: center;
+  gap: 30px;
+`;
+
+const StyledItem = styled.li`
+  
+`
+
+const StyledLink = styled.a`
+  gap: 30px;
+  color: ${theme.colors.secondaryFont};
+  font-family: "Roboto", serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
 `;

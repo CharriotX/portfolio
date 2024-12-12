@@ -1,4 +1,3 @@
-import './App.css';
 import { About } from './layout/section/about/About';
 import { Header } from './layout/header/Header';
 import { Main } from './layout/section/main/Main';

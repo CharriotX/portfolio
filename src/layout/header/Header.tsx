@@ -22,4 +22,6 @@ export const Header = () => {
 const StyledHeader = styled.header`
   background: ${theme.colors.secondaryBg};
   min-height: 100px;
+  display: flex;
+  align-items: center;
 `;

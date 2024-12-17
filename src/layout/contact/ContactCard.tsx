@@ -6,10 +6,10 @@ import styled from "styled-components";
 export const ContactCard = () => {
   return (
     <CardWrap>
-      <StyledTextField>
+      <TextBlock>
         <h2>Have any project in mind?</h2>
-        <div>Let’s work together and I will help you by all my best.</div>
-      </StyledTextField>
+        <p>Let’s work together and I will help you by all my best.</p>
+      </TextBlock>
       <div>
         <PrimaryButton
           color="rgba(15, 191, 97, 1)"
@@ -33,7 +33,7 @@ const CardWrap = styled.div`
   color: rgba(255, 255, 255, 1);
 `;
 
-const StyledTextField = styled.div`
+const TextBlock = styled.div`
   min-height: 250px;
   display: flex;
   flex-direction: column;

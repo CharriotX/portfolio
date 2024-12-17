@@ -20,7 +20,7 @@ export const Navigation = () => {
           <StyledLink href="#">My work</StyledLink>
         </StyledItem>
         <StyledItem>
-          <PrimaryButton>Resume</PrimaryButton>
+          <PrimaryButton color={"${theme.colors.primaryFont}"}>Resume</PrimaryButton>
         </StyledItem>
       </StyledList>
     </StyledMenu>
@@ -28,7 +28,6 @@ export const Navigation = () => {
 };
 
 const StyledMenu = styled.nav`
-
 `;
 
 const StyledList = styled.ul`

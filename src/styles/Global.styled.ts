@@ -18,14 +18,17 @@ export const GlobalStyle = createGlobalStyle`
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: ${theme.colors.primaryFont}
+    color: ${theme.colors.primaryFont};
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
     }
 
     a {
         text-decoration: none;
     }
 
-    ul {
+    ul,ol,li {
         list-style: none;
     }
 

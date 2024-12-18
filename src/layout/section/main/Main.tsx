@@ -35,6 +35,7 @@ const StyledMain = styled.section`
   min-height: 530px;
   background-color: rgba(15, 191, 97, 0.1);
   padding-top: 47px;
+  margin-bottom: 140px;
 `;
 
 const TitleBlock = styled.div`

@@ -5,13 +5,14 @@ import { SkillList } from "./SkillList";
 import { SectionTitle } from "../../../components/sectionTitle/SectionTitle";
 import { Container } from "../../../components/Container";
 import { SkillCards } from "./SkillCards";
+import { theme } from "../../../styles/Theme";
 
 export const Skills = () => {
   return (
     <StyledSkills>
       <Container>
         <FlexContainer direction="column" align="center" margin="0 0 92px 0">
-          <div>My service</div>
+          <Subtitle>My service</Subtitle>
           <SectionTitle>What I Do</SectionTitle>
         </FlexContainer>
           <SkillList></SkillList>
@@ -22,4 +23,11 @@ export const Skills = () => {
   );
 };
 
-const StyledSkills = styled.section``;
+const StyledSkills = styled.section`
+  margin-bottom: 106px;
+`;
+
+const Subtitle = styled.div`
+  margin-bottom: 16px;
+  color: ${theme.colors.secondaryFont};
+`

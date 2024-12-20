@@ -7,6 +7,7 @@ export const theme = {
 
         primaryFont: "#000000",
         secondaryFont: "#494949",
+        contactCardFont: "#fff",
         sectionTitleFont: "#0FBF61"
     }
 }

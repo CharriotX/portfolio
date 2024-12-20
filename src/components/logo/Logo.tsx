@@ -1,10 +1,15 @@
-import React from 'react'
-import { Icon } from '../icon/Icon'
+import React from "react";
+import { Icon } from "../icon/Icon";
+import styled from "styled-components";
 
 export const Logo = () => {
   return (
-    <a>
-        <Icon iconId={'logo'}/>
-    </a>
-  )
-}
+    <StyledLogo>
+      <Icon iconId={"logo"} />
+    </StyledLogo>
+  );
+};
+
+const StyledLogo = styled.a`
+  cursor: pointer;
+`;

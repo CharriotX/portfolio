@@ -3,12 +3,17 @@ import styled from "styled-components";
 import { FlexContainer } from "../../components/flexContainer/FlexContainer";
 import { Icon } from "../../components/icon/Icon";
 import { Container } from "../../components/Container";
+import { theme } from "../../styles/Theme";
 
 export const Footer = () => {
   return (
     <StyledFooter>
       <Container>
-        <FlexContainer justify="space-between" align="center">
+        <FlexContainer
+          justify="space-between"
+          align="center"
+          margin="0 0 60px"
+        >
           <StyledText>Designed and developed by Rostam Sadiqi 2021</StyledText>
           <IconNavigation>
             <IconList>
@@ -16,9 +21,9 @@ export const Footer = () => {
                 <IconLink>
                   <Icon
                     iconId="social1"
-                    height="21.88px"
-                    width="21.88px"
-                    viewBox="0 0 22 22"
+                    height="23px"
+                    width="21.89px"
+                    viewBox="0 0 21.89 21.88"
                   ></Icon>
                 </IconLink>
               </IconItem>
@@ -62,10 +67,15 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer`
   min-height: 300px;
+  background-color: ${theme.colors.secondaryBg};
+  display: flex;
+  align-items: end;
 `;
 
 const StyledText = styled.p`
-  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
 `;
 
 const IconNavigation = styled.nav``;
@@ -74,11 +84,13 @@ const IconList = styled.ul`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 8px;
 `;
 
 const IconItem = styled.li`
-  margin: 8px;
+  &:not(:nth-last-child(-n+1)) {
+    margin-right: 20px;
+}
+  cursor: pointer;
 `;
 
 const IconLink = styled.a``;

@@ -20,4 +20,5 @@ export const PrimaryButton = styled.button<PrimaryButtonPropsType>`
   border-radius: 50px;
   line-height: ${props => props.lineHeight || "30px"};
   font-size: ${props => props.fontSize || "18px"};
+  cursor: pointer;
 `;

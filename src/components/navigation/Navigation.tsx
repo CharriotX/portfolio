@@ -47,4 +47,8 @@ const StyledLink = styled.a`
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
+
+  &:hover{
+    color: ${theme.colors.sectionTitleFont}
+  }
 `;

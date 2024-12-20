@@ -11,9 +11,6 @@ export const TechnologiesList = (props: StyledTechnologiesPropsType) => {
   return (
     <List>
       {props.techItems?.map((item) => {
-        {
-          console.log(item);
-        }
         return (
           <Item>
             <Icon iconId="arrow" width="14px" height="11px"></Icon>

@@ -20,15 +20,16 @@ export const Navigation = () => {
           <StyledLink href="#">My work</StyledLink>
         </StyledItem>
         <StyledItem>
-          <PrimaryButton color={"${theme.colors.primaryFont}"}>Resume</PrimaryButton>
+          <PrimaryButton color={"${theme.colors.primaryFont}"}>
+            Resume
+          </PrimaryButton>
         </StyledItem>
       </StyledList>
     </StyledMenu>
   );
 };
 
-const StyledMenu = styled.nav`
-`;
+const StyledMenu = styled.nav``;
 
 const StyledList = styled.ul`
   display: flex;
@@ -36,9 +37,7 @@ const StyledList = styled.ul`
   gap: 30px;
 `;
 
-const StyledItem = styled.li`
-  
-`
+const StyledItem = styled.li``;
 
 const StyledLink = styled.a`
   gap: 30px;
@@ -48,7 +47,7 @@ const StyledLink = styled.a`
   font-size: 18px;
   line-height: 21px;
 
-  &:hover{
-    color: ${theme.colors.sectionTitleFont}
+  &:hover {
+    color: ${theme.colors.sectionTitleFont};
   }
 `;

@@ -12,7 +12,7 @@ export const Footer = () => {
         <FlexContainer
           justify="space-between"
           align="center"
-          margin="0 0 60px"
+          margin="200px 0 60px"
         >
           <StyledText>Designed and developed by Rostam Sadiqi 2021</StyledText>
           <IconNavigation>
@@ -66,7 +66,6 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-  min-height: 300px;
   background-color: ${theme.colors.secondaryBg};
   display: flex;
   align-items: end;

@@ -5,6 +5,7 @@ import image from "../../../accets/images/about.webp";
 import styled from "styled-components";
 import { Container } from "../../../components/Container";
 import { TechnologiesList } from "./TechnologiesList";
+import { theme } from "../../../styles/Theme";
 
 const items = [
   "Angular",
@@ -24,7 +25,9 @@ export const About = () => {
         </FlexContainer>
         <FlexContainer justify="space-around">
           <FlexContainer align="center">
-            <Photo src={image} width="280px" height="420px"></Photo>
+            <PhotoWrapper>
+              <Photo src={image} width="280px" height="420px"></Photo>
+            </PhotoWrapper>
           </FlexContainer>
           <TextBlock>
             <Text>
@@ -35,8 +38,10 @@ export const About = () => {
               Web Design, UX/UI design, and Front-end Development. Specialize in
               Information Security and software engineering, creating dynamic
               and beautiful web pages. I have been in the field for nearly 5
-              years, and have been loving every minute of it. <Text>Here are a few
-              technologies I’ve been working with recently:</Text>
+              years, and have been loving every minute of it.{" "}
+              <Text>
+                Here are a few technologies I’ve been working with recently:
+              </Text>
             </Text>
             <TechnologiesList techItems={items}></TechnologiesList>
           </TextBlock>
@@ -46,12 +51,11 @@ export const About = () => {
   );
 };
 
-const StyledSection = styled.section`
-`;
+const StyledSection = styled.section``;
 
 const TextBlock = styled.div`
- margin-bottom: 140px;
-`
+  margin-bottom: 140px;
+`;
 
 const Text = styled.p`
   font-size: 18px;
@@ -59,4 +63,23 @@ const Text = styled.p`
   line-height: 30px;
   max-width: 550px;
   padding-top: 37px;
+`;
+
+const PhotoWrapper = styled.div`
+  position: relative;
+  z-index: 100;
+
+  &::before{
+    content: "";
+    display: inline-block;
+    width: 280px;
+    height: 420px;
+    border: 3px solid ${theme.colors.sectionTitleFont};
+    border-radius: 20px;
+    
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    z-index: -1;
+  }
 `;

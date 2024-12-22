@@ -24,4 +24,29 @@ const StyledHeader = styled.header`
   min-height: 100px;
   display: flex;
   align-items: center;
+  position: relative;
+
+  &::before {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    width: 190px;
+    height: 190px;
+    border: 20px solid ${theme.colors.sectionTitleFont};
+    border-radius: 50%;
+    top: 142px;
+    left: -5%;
+  }
+
+  &::after {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    width: 190px;
+    height: 190px;
+    border: 20px solid ${theme.colors.sectionTitleFont};
+    border-radius: 50%;
+    top: -19px;
+    left: 95%;
+  }
 `;

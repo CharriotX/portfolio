@@ -13,7 +13,7 @@ export const Main = () => {
       <Container>
         <FlexContainer justify="space-between" align="center">
           <TitleBlock>
-            <span>Hello, I’m</span>
+            <LittleText>Hello, I’m</LittleText>
             <MainTitle>Fabio Scaletta</MainTitle>
             <Text>
               I’m a UX/UI designer and Front End Developer based in Kuala
@@ -44,11 +44,10 @@ const TitleBlock = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-
-  span {
-    font-size: 30px;
-    color: ${theme.colors.sectionTitleFont}
-  }
+`
+const LittleText = styled.span`
+  font-size: 30px;
+  color: ${theme.colors.sectionTitleFont}
 `
 
 const MainTitle = styled.h2`

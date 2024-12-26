@@ -3,6 +3,7 @@ import { FlexContainer } from "../../components/flexContainer/FlexContainer";
 import { PrimaryButton } from "../../components/button/PrimaryButton";
 import styled from "styled-components";
 import { theme } from "../../styles/Theme";
+import { font } from "../../styles/Common";
 
 export const ContactCard = () => {
   return (
@@ -11,9 +12,9 @@ export const ContactCard = () => {
         <Title>Have any project in mind?</Title>
         <Text>
           Let’s work together and I will help you by all my best.
-          <TriangleRotateBLock>
+          {/* <TriangleRotateBLock>
             <TriangleBlock></TriangleBlock>
-          </TriangleRotateBLock>
+          </TriangleRotateBLock> */}
         </Text>
       </TextBlock>
       <ButtonBlock>
@@ -38,10 +39,16 @@ const CardWrap = styled.div`
   width: 100%;
   color: ${theme.colors.contactCardFont};
   padding: 0 53px 0 45px;
+
   position: relative;
   top: 45px;
   box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
   margin: 0 15px;
+
+  @media ${theme.media.mobile} {
+    flex-direction: column;
+    padding: 0 20px 20px 20px;
+  }
 `;
 
 const TextBlock = styled.div`
@@ -49,6 +56,10 @@ const TextBlock = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 72px 0;
+
+  @media ${theme.media.mobile} {
+    padding: 15px 0;
+  }
 `;
 
 const TriangleRotateBLock = styled.div`
@@ -91,15 +102,11 @@ const TriangleBlock = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 45px;
-  font-weight: 500;
-  line-height: 52.73px;
+  ${font({weight: 500, color: theme.colors.contactCardFont, lineHeight: "52.73px", Fmax: 45, Fmin: 30})}
 `;
 
 const Text = styled.h2`
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 30px;
+  ${font({weight: 500, color: theme.colors.contactCardFont, lineHeight: "30px", Fmax: 18, Fmin: 16})}
   margin-top: 24px;
 `;
 const ButtonBlock = styled.div``;

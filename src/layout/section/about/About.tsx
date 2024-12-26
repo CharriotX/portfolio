@@ -78,6 +78,7 @@ const PhotoContainer = styled.div`
 const PhotoWrapper = styled.div`
   position: relative;
   z-index: 100;
+  padding-top: 25px;
 
   &::before {
     content: "";
@@ -88,7 +89,7 @@ const PhotoWrapper = styled.div`
     border-radius: 20px;
 
     position: absolute;
-    top: 40px;
+    top: 60px;
     right: 50px;
     z-index: -1;
   }

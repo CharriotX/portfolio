@@ -11,7 +11,12 @@ export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexContainer justify="space-between" align="center" wrap="wrap">
+        <FlexContainer
+          justify="space-between"
+          wrap="wrap"
+          margin="0 auto"
+          align="center"
+        >
           <TitleBlock>
             <LittleText>Hello, I’m</LittleText>
             <MainTitle>Fabio Scaletta</MainTitle>
@@ -38,24 +43,27 @@ export const Main = () => {
 
 const StyledMain = styled.section`
   background-color: rgba(15, 191, 97, 0.1);
-  padding-top: 47px;
   margin-bottom: 140px;
 
   img {
-    margin:47px 0 92px;
+    margin: 47px 0 92px;
   }
 `;
 
 const TitleBlock = styled.div`
-max-width: 476px;
+  max-width: 476px;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-top: -20px;
+
 
   ${PrimaryButton}:hover {
     color: white;
   }
 `;
+
+
 const LittleText = styled.span`
   font-size: 30px;
   color: ${theme.colors.sectionTitleFont};

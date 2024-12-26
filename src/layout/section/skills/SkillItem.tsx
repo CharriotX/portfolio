@@ -38,8 +38,8 @@ export const SkillItem = (props: SkillItemPropsType) => {
 };
 
 const Skill = styled.div`
-min-width: 330px;
-flex-grow: 1;
+  width: 320px;
+  padding-bottom: 10px;
 `;
 
 const BgcImage = styled.div<BackgroundPropsType>`

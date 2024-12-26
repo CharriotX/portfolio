@@ -21,7 +21,7 @@ export const Works = () => {
           <WorksCards></WorksCards>
         </FlexContainer>
         <FlexContainer justify="center" margin="97px 0 92px">
-          <PrimaryButton padding="12px 64.5px">See all</PrimaryButton>
+          <PrimaryButton padding="12px 64.5px" fontSize="20px">See More</PrimaryButton>
         </FlexContainer>
       </Container>
     </StyledWorks>

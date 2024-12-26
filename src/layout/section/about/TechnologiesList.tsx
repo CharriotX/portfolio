@@ -30,7 +30,7 @@ const List = styled.ol`
 `;
 
 const Item = styled.li`
-  padding: 12px 0;
+  padding: 15px 0;
 
   span {
     margin-left: 10px;

@@ -1,46 +1,69 @@
 import styled from "styled-components";
-import skill1 from "../../../accets/images/skill1.png"
-import skill2 from "../../../accets/images/skill2.png"
-import skill3 from "../../../accets/images/skill3.png"
+import skill1 from "../../../accets/images/skill1.png";
+import skill2 from "../../../accets/images/skill2.png";
+import skill3 from "../../../accets/images/skill3.png";
 import { SkillItem } from "./SkillItem";
+import { theme } from "../../../styles/Theme";
 
 const data = {
   ui: {
     number: "01",
     image: skill1,
     backgroundImageColor: "#0FBF6133",
-    text: "UX/UI Design"
+    text: "UX/UI Design",
   },
   frontend: {
     number: "02",
     image: skill2,
     backgroundImageColor: "#2D4CFF21",
-    text: "Front End Development "
+    text: "Front End Development ",
   },
   design: {
     number: "03",
     image: skill3,
     backgroundImageColor: "#0FBF610D",
-    text: "Responsive Design"
-  }
-}
+    text: "Responsive Design",
+  },
+};
 
 export const SkillList = () => {
   return (
     <StyledSkillList>
-     <SkillItem image={data.ui.image} backgroundImageColor={data.ui.backgroundImageColor} text={data.ui.text} number={data.ui.number}></SkillItem>
-     <SkillItem image={data.frontend.image} backgroundImageColor={data.frontend.backgroundImageColor} text={data.frontend.text} number={data.frontend.number}></SkillItem>
-     <SkillItem image={data.design.image} backgroundImageColor={data.design.backgroundImageColor} text={data.design.text} number={data.design.number}></SkillItem>
+      <SkillItem
+        image={data.ui.image}
+        backgroundImageColor={data.ui.backgroundImageColor}
+        text={data.ui.text}
+        number={data.ui.number}
+      ></SkillItem>
+      <SkillItem
+        image={data.frontend.image}
+        backgroundImageColor={data.frontend.backgroundImageColor}
+        text={data.frontend.text}
+        number={data.frontend.number}
+      ></SkillItem>
+      <SkillItem
+        image={data.design.image}
+        backgroundImageColor={data.design.backgroundImageColor}
+        text={data.design.text}
+        number={data.design.number}
+      ></SkillItem>
     </StyledSkillList>
   );
 };
 
 const StyledSkillList = styled.div`
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 15px;
-  min-height: 130px;
-  margin-bottom: 132px;
-`;
+  margin-bottom: 165px;
+  justify-content: space-between;
 
+  &:first-child{
+    padding-right: 20px;
+  }
+
+
+  @media ${theme.media.tablet} {
+    flex-direction: column;
+    align-items: center;
+  }
+`;

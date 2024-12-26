@@ -69,6 +69,14 @@ const StyledFooter = styled.footer`
   background-color: ${theme.colors.secondaryBg};
   display: flex;
   align-items: end;
+
+  @media ${theme.media.mobile} {
+    ${FlexContainer}{
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+  }
 `;
 
 const StyledText = styled.p`

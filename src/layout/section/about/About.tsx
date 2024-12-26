@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { Container } from "../../../components/Container";
 import { TechnologiesList } from "./TechnologiesList";
 import { theme } from "../../../styles/Theme";
+import { font } from "../../../styles/Common";
 
 const items = [
   "Angular",
@@ -20,16 +21,14 @@ export const About = () => {
   return (
     <StyledSection>
       <Container>
-        <FlexContainer justify="center">
-          <SectionTitle>About Me</SectionTitle>
-        </FlexContainer>
-        <FlexContainer justify="space-around">
-          <FlexContainer align="center">
+        <FlexContainer justify="space-around" wrap="wrap-reverse">
+          <PhotoContainer>
             <PhotoWrapper>
               <Photo src={image} width="280px" height="420px"></Photo>
             </PhotoWrapper>
-          </FlexContainer>
+          </PhotoContainer>
           <TextBlock>
+            <SectionTitle margin="0 0 37px 0">About Me</SectionTitle>
             <Text>
               Hello! My name is Rostam Sadiqi and I am a UX/UI designer and
               Front End Developer. I enjoy creating things that live on the
@@ -51,35 +50,53 @@ export const About = () => {
   );
 };
 
-const StyledSection = styled.section``;
-
-const TextBlock = styled.div`
+const StyledSection = styled.section`
   margin-bottom: 140px;
 `;
 
+const TextBlock = styled.div``;
+
 const Text = styled.p`
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 30px;
+  ${font({
+    color: theme.colors.secondaryFont,
+    lineHeight: "30px",
+    Fmax: 18,
+    Fmin: 16,
+  })}
   max-width: 550px;
-  padding-top: 37px;
+
+  p {
+    padding-top: 37px;
+  }
+`;
+
+const PhotoContainer = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 const PhotoWrapper = styled.div`
   position: relative;
   z-index: 100;
 
-  &::before{
+  &::before {
     content: "";
     display: inline-block;
     width: 280px;
     height: 420px;
     border: 3px solid ${theme.colors.sectionTitleFont};
     border-radius: 20px;
-    
+
     position: absolute;
     top: 40px;
     right: 50px;
     z-index: -1;
+  }
+
+  @media ${theme.media.tablet} {
+    &::before {
+      top: 15px;
+      right: 20px;
+    }
   }
 `;

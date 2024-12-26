@@ -38,7 +38,8 @@ export const SkillItem = (props: SkillItemPropsType) => {
 };
 
 const Skill = styled.div`
-min-width: 360px;
+min-width: 330px;
+flex-grow: 1;
 `;
 
 const BgcImage = styled.div<BackgroundPropsType>`
@@ -62,4 +63,9 @@ const Text = styled.p`
   font-weight: 500;
   line-height: 30px;
   margin-top: 8px;
+  white-space: nowrap;
+
+  @media ${theme.media.tablet} {
+    white-space: normal;
+  }
 `;

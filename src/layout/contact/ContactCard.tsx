@@ -34,12 +34,14 @@ const CardWrap = styled.div`
   align-items: center;
   background: rgba(15, 191, 97, 1);
   border-radius: 15px;
-  min-width: 1116px;
+  max-width: 1116px;
+  width: 100%;
   color: ${theme.colors.contactCardFont};
   padding: 0 53px 0 45px;
   position: relative;
   top: 45px;
   box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
+  margin: 0 15px;
 `;
 
 const TextBlock = styled.div`

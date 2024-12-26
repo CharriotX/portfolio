@@ -9,5 +9,10 @@ export const theme = {
         secondaryFont: "#494949",
         contactCardFont: "#fff",
         sectionTitleFont: "#0FBF61"
+    },
+
+    media: {
+        tablet: "screen and (max-width: 768px)",
+        mobile: "screen and (max-width: 576px)",
     }
 }

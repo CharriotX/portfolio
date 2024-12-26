@@ -4,6 +4,7 @@ import { FlexContainer } from "../../../components/flexContainer/FlexContainer";
 import { Photo } from "../../../components/photo/Photo";
 import { Icon } from "../../../components/icon/Icon";
 import { theme } from "../../../styles/Theme";
+import { font } from "../../../styles/Common";
 
 type SkillCardPropsType = {
   techName: string;
@@ -14,10 +15,10 @@ type SkillCardPropsType = {
 export const SkillCard = (props: SkillCardPropsType) => {
   return (
     <StyledCard>
-      <FlexContainer justify="center">
+      <FlexContainer justify="space-around" wrap="wrap-reverse">
         <CardInfoBlock>
           <StyledName>{props.techName}</StyledName>
-          <StyledText>{props.textTitle}</StyledText>
+          <StyledTitle>{props.textTitle}</StyledTitle>
           <StyledLink>
             Learn More
             <span>
@@ -29,7 +30,6 @@ export const SkillCard = (props: SkillCardPropsType) => {
               ></Icon>
             </span>
           </StyledLink>
-          <FlexContainer></FlexContainer>
         </CardInfoBlock>
         <ImageBlock>
           <Photo src={props.srcImage}></Photo>
@@ -42,23 +42,35 @@ export const SkillCard = (props: SkillCardPropsType) => {
 const StyledCard = styled.div`
   border: 1px solid rgba(196, 196, 196, 1);
   border-radius: 30px;
-  max-height: 400px;
+  max-width: 100%;
 
   &:nth-child(2) {
     margin: 108px 0;
+
+    @media ${theme.media.tablet} {
+    margin: 50px 0;
   }
+  }
+
 `;
 
 const CardInfoBlock = styled.div`
   padding: 50px 80px 50px 50px;
+
+  @media ${theme.media.tablet} {
+    padding: 15px;
+  }
 `;
 
-const StyledText = styled.p`
-  font-size: 35px;
-  font-weight: 700;
-  line-height: 45px;
+const StyledTitle = styled.p`
+  ${font({ weight: 700, lineHeight: "45px", Fmax: 35, Fmin: 25 })}
   margin: 36px 0 72px;
   max-width: 380px;
+
+  @media ${theme.media.tablet} {
+    margin: 18px 0 36px;
+  }
+
 `;
 
 const StyledName = styled.p`
@@ -75,7 +87,21 @@ const ImageBlock = styled.div`
   right: 51px;
 
   img {
+    max-width: 100%;
     box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  @media ${theme.media.tablet} {
+    position: block;
+    right: 0;
+    top: 10px;
+    padding: 0 10px;
+
+    img{
+      max-width: 100%;
+      height: 300px;
+    }
+
   }
 `;
 
@@ -87,6 +113,6 @@ const StyledLink = styled.a`
   cursor: pointer;
 
   span {
-    padding-left:26px;
+    padding-left: 26px;
   }
 `;

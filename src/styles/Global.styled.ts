@@ -21,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
     color: ${theme.colors.primaryFont};
     font-size: 18px;
     font-weight: 400;
-    line-height: 30px;
+    line-height: 1.2;
     }
 
     a {

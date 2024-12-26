@@ -1,8 +1,4 @@
-import React from "react";
-import { Icon } from "../../../components/icon/Icon";
 import styled from "styled-components";
-import { FlexContainer } from "../../../components/flexContainer/FlexContainer";
-import { Photo } from "../../../components/photo/Photo";
 import skill1 from "../../../accets/images/skill1.png"
 import skill2 from "../../../accets/images/skill2.png"
 import skill3 from "../../../accets/images/skill3.png"
@@ -42,27 +38,9 @@ export const SkillList = () => {
 const StyledSkillList = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
   min-height: 130px;
   margin-bottom: 132px;
 `;
 
-const BackgroundPhoto = styled.div`
-  min-width: 120px;
-  min-height: 120px;
-  border-radius: 20px;
-  display: flex;
-  justify-content:center;
-  align-items: center;
-`
-const Skill = styled.li``;
-
-const BgcImage = styled.div`
-
-`
-
-const Number = styled.span`
-  
-`
-const Text = styled.p`
-  
-`

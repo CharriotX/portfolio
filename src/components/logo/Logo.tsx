@@ -13,4 +13,8 @@ export const Logo = () => {
 
 const StyledLogo = styled.a`
   cursor: pointer;
-`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+`;

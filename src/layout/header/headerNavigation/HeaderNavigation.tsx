@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { PrimaryButton } from "../button/PrimaryButton";
-import { theme } from "../../styles/Theme";
+import { PrimaryButton } from "../../../components/button/PrimaryButton";
+import { theme } from "../../../styles/Theme";
 
-export const Navigation = () => {
+export const HeaderNavigation = () => {
   return (
     <StyledMenu>
       <StyledList>
@@ -29,19 +29,25 @@ export const Navigation = () => {
   );
 };
 
-const StyledMenu = styled.nav``;
+const StyledMenu = styled.nav`
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
 
-const StyledList = styled.ul`
-  display: flex;
-  align-items: center;
-  gap: 30px;
+  @media ${theme.media.tablet} {
+    display: none;
+  }
 `;
+
+const StyledList = styled.ul``;
 
 const StyledItem = styled.li``;
 
 const StyledLink = styled.a`
   gap: 30px;
-  color: ${theme.colors.secondaryFont};
+  color: ${theme.colors.primaryFont};
   font-family: "Roboto", serif;
   font-weight: 500;
   font-size: 18px;

@@ -12,10 +12,9 @@ export const Main = () => {
     <StyledMain>
       <Container>
         <FlexContainer
-          justify="space-between"
+          justify="space-around"
           wrap="wrap"
-          margin="0 auto"
-          align="center"
+          align="flex-start"
         >
           <TitleBlock>
             <LittleText>Hello, I’m</LittleText>
@@ -53,9 +52,9 @@ const StyledMain = styled.section`
 const TitleBlock = styled.div`
   max-width: 476px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   margin-top: -20px;
+  margin-top: 100px;
 
 
   ${PrimaryButton}:hover {

@@ -1,45 +1,32 @@
-import React from "react";
 import styled, { css } from "styled-components";
-import { PrimaryButton } from "../../../components/button/PrimaryButton";
 import { theme } from "../../../styles/Theme";
 
-export const MobileNavigation = () => {
-  return (
-    <StyledMobileMenu>
-      <BurgerButton isOpen={false}>
-        <span></span>
-      </BurgerButton>
-      <MobileMenuPopup isOpen={false}>
-        <StyledList>
-          <StyledItem>
-            <StyledLink href="#">Home</StyledLink>
-          </StyledItem>
-          <StyledItem>
-            <StyledLink href="#">About</StyledLink>
-          </StyledItem>
-          <StyledItem>
-            <StyledLink href="#">Service</StyledLink>
-          </StyledItem>
-          <StyledItem>
-            <StyledLink href="#">My work</StyledLink>
-          </StyledItem>
-          <StyledItem>
-            <PrimaryButton color={"${theme.colors.primaryFont}"}>
-              Resume
-            </PrimaryButton>
-          </StyledItem>
-        </StyledList>
-      </MobileMenuPopup>
-    </StyledMobileMenu>
-  );
-};
+//Menu
 
-const StyledMobileMenu = styled.nav`
-  display: none;
-  @media ${theme.media.tablet} {
-    display:block;
+const MenuList = styled.ul`
+  display: flex;
+  align-items: center;
+  gap: 30px;
+`;
+
+const MenuItem = styled.li``;
+
+const MenuLink = styled.a`
+  gap: 30px;
+  color: ${theme.colors.primaryFont};
+  font-family: "Roboto", serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+
+  &:hover {
+    color: ${theme.colors.sectionTitleFont};
   }
 `;
+
+//Mobile menu
+
+const MobileMenu = styled.nav``;
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   position: fixed;
@@ -74,7 +61,6 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   width: 200px;
   height: 200px;
   z-index: 999999;
-
 
   span {
     display: block;
@@ -126,19 +112,16 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   }
 `;
 
-const StyledList = styled.ul``;
+//desktop menu
 
-const StyledItem = styled.li``;
+const DesktopMenu = styled.nav``;
 
-const StyledLink = styled.a`
-  gap: 30px;
-  color: ${theme.colors.primaryFont};
-  font-family: "Roboto", serif;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-
-  &:hover {
-    color: ${theme.colors.sectionTitleFont};
-  }
-`;
+export const S = {
+  MenuList,
+  MenuItem,
+  MenuLink,
+  MobileMenu,
+  MobileMenuPopup,
+  BurgerButton,
+  DesktopMenu,
+};

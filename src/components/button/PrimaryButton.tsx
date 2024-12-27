@@ -13,6 +13,7 @@ type PrimaryButtonPropsType = {
 
 export const PrimaryButton = styled.button<PrimaryButtonPropsType>`
   border: none;
+  font-family: 'Roboto', sans-serif;
   background: ${(props) => props.background || "rgba(15, 191, 97, 1)"};
   color: ${props => props.color || "rgba(255, 255, 255, 1)"};
   padding: ${props => props.padding || "12px 40px"};
@@ -20,5 +21,6 @@ export const PrimaryButton = styled.button<PrimaryButtonPropsType>`
   border-radius: 50px;
   line-height: ${props => props.lineHeight || "30px"};
   font-size: ${props => props.fontSize || "18px"};
+  font-weight: 500;
   cursor: pointer;
 `;

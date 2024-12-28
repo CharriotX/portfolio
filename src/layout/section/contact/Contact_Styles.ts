@@ -1,33 +1,6 @@
-import React from "react";
-import { FlexContainer } from "../../components/flexContainer/FlexContainer";
-import { PrimaryButton } from "../../components/button/PrimaryButton";
 import styled from "styled-components";
-import { theme } from "../../styles/Theme";
-import { font } from "../../styles/Common";
-
-export const ContactCard = () => {
-  return (
-    <CardWrap>
-      <TextBlock>
-        <Title>Have any project in mind?</Title>
-        <Text>
-          Let’s work together and I will help you by all my best.
-          {/* <TriangleRotateBLock>
-            <TriangleBlock></TriangleBlock>
-          </TriangleRotateBLock> */}
-        </Text>
-      </TextBlock>
-      <ButtonBlock>
-        <PrimaryButton
-          color="rgba(15, 191, 97, 1)"
-          background="rgba(255, 255, 255, 1)"
-        >
-          Let’s talk
-        </PrimaryButton>
-      </ButtonBlock>
-    </CardWrap>
-  );
-};
+import { font } from "../../../styles/Common";
+import { theme } from "../../../styles/Theme";
 
 const CardWrap = styled.div`
   display: flex;
@@ -65,7 +38,7 @@ const TextBlock = styled.div`
 const TriangleRotateBLock = styled.div`
   position: relative;
   transform: rotate(-43deg);
-`
+`;
 
 const TriangleBlock = styled.div`
   background-color: white;
@@ -102,11 +75,33 @@ const TriangleBlock = styled.div`
 `;
 
 const Title = styled.h2`
-  ${font({weight: 500, color: theme.colors.contactCardFont, lineHeight: "52.73px", Fmax: 45, Fmin: 30})}
+  ${font({
+    weight: 500,
+    color: theme.colors.contactCardFont,
+    lineHeight: "52.73px",
+    Fmax: 45,
+    Fmin: 30,
+  })}
 `;
 
 const Text = styled.h2`
-  ${font({weight: 500, color: theme.colors.contactCardFont, lineHeight: "30px", Fmax: 18, Fmin: 16})}
+  ${font({
+    weight: 500,
+    color: theme.colors.contactCardFont,
+    lineHeight: "30px",
+    Fmax: 18,
+    Fmin: 16,
+  })}
   margin-top: 24px;
 `;
 const ButtonBlock = styled.div``;
+
+export const S = {
+  CardWrap,
+  TextBlock,
+  TriangleRotateBLock,
+  TriangleBlock,
+  Title,
+  Text,
+  ButtonBlock,
+};

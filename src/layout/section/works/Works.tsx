@@ -1,19 +1,18 @@
 import React from "react";
-import styled from "styled-components";
 import { FlexContainer } from "../../../components/flexContainer/FlexContainer";
 import { SectionTitle } from "../../../components/sectionTitle/SectionTitle";
 import { WorksNavList } from "./WorksNavList";
 import { WorksCards } from "./WorksCards";
 import { PrimaryButton } from "../../../components/button/PrimaryButton";
-import { theme } from "../../../styles/Theme";
 import { Container } from "../../../components/Container";
+import { S } from "./Works_Styles";
 
-export const Works = () => {
+export const Works: React.FC = () => {
   return (
-    <StyledWorks>
+    <S.Works>
       <Container>
         <FlexContainer justify="" direction="column">
-          <Subtitle>Portfolio</Subtitle>
+          <S.Subtitle>Portfolio</S.Subtitle>
           <SectionTitle>My recent works</SectionTitle>
         </FlexContainer>
         <WorksNavList></WorksNavList>
@@ -21,16 +20,11 @@ export const Works = () => {
           <WorksCards></WorksCards>
         </FlexContainer>
         <FlexContainer justify="center" margin="97px 0 92px">
-          <PrimaryButton padding="12px 64.5px" fontSize="20px">See More</PrimaryButton>
+          <PrimaryButton padding="12px 64.5px" fontSize="20px">
+            See More
+          </PrimaryButton>
         </FlexContainer>
       </Container>
-    </StyledWorks>
+    </S.Works>
   );
 };
-
-const StyledWorks = styled.section``;
-
-const Subtitle = styled.div`
-  margin-bottom: 16px;
-  color: ${theme.colors.secondaryFont};
-`;
